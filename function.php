@@ -18,21 +18,14 @@ function fashmag_social_post_share(){
         </li>
 
         <li>
-            <a href="http://twitter.com/intent/tweet?text='.rawurlencode( get_the_title() ) .'&amp;url='.rawurlencode( get_the_permalink() ).'">
-                    // icon here 
-                </a>
-            </li>
+        <a href="http://twitter.com/intent/tweet?text='.rawurlencode( get_the_title() ) .'&amp;url='.rawurlencode( get_the_permalink() ).'">
+                // icon here 
+            </a>
+        </li>
 
-              <li>
-                    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url='.rawurlencode( get_the_permalink() ).'&amp;title='.rawurlencode( get_the_title() ).'&amp;summary='.rawurlencode ( $share_excerpt ).'&amp;source='.rawurlencode( get_bloginfo('name') ).'">
-                        // icon here 
-                    </a>
-                </li>
-
-
-                <li>
-            <a href="http://www.whatsapp://send?text='.$sb_title . ' ' . $sb_url;">
-                
+      <li>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url='.rawurlencode( get_the_permalink() ).'&amp;title='.rawurlencode( get_the_title() ).'&amp;summary='.rawurlencode ( $share_excerpt ).'&amp;source='.rawurlencode( get_bloginfo('name') ).'">
+                // icon here 
             </a>
         </li>
 
