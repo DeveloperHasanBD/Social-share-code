@@ -29,6 +29,17 @@ function fashmag_social_post_share(){
             </a>
         </li>
 
+        <li>
+	         <a href="https://web.skype.com/share?url=' . rawurlencode(get_the_title()) . '&amp;url=' . rawurlencode(get_the_permalink()) . '">
+        	   // icon here 
+		 </a>
+	 </li>
+	 <li>
+	     <a href="https://api.whatsapp.com/send?text=**%0A%0A' . rawurlencode(get_the_permalink()) . '">
+	       // icon here 
+		 </a>
+	 </li>
+
       
     </ul>';
     return $html;
