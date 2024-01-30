@@ -1,3 +1,53 @@
+<!-- Solution #1  -->
+
+
+<span>Share</span>
+<?php
+
+$post_title = urlencode(get_the_title());
+$post_url   = urlencode(get_permalink());
+$post_thumb = urlencode(get_the_post_thumbnail_url());
+// Facebook
+$facebook_share_link = "https://www.facebook.com/sharer/sharer.php?u={$post_url}&picture={$post_thumb}";
+
+// Pinterest
+$pinterest_share_link = "https://pinterest.com/pin/create/button/?url={$post_url}&media={$post_thumb}&description={$post_title}";
+// Gmail
+$gmail_subject = get_the_title();
+$gmail_body = 'Hey, I thought you might be interested in reading this post: ' . get_the_title() . ' ' . get_permalink();
+$gmail_share_link = "mailto:?subject={$gmail_subject}&body={$gmail_body}";
+// URL encode the Gmail subject
+
+
+
+
+?>
+<img src="<?php echo $post_thumb; ?>" alt="">
+<div class="icons">
+    <a href="<?php echo  $facebook_share_link; ?>" target="_blank" class="fb_icon">
+	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon/facebook.png" alt="facebook">
+    </a>
+    <a href="<?php echo  $pinterest_share_link; ?>" target="_blank">
+	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon/pinterest.png" alt="pinterest">
+    </a>
+    <a href="<?php echo  $gmail_share_link; ?>" target="_blank">
+	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon/mail.png" alt="mail">
+    </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Solution #2  -->
+
+
 function fashmag_social_post_share(){
 
     if( has_post_thumbnail() ){
